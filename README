@@ -1,0 +1,33 @@
+
+Description
+	Using Apple Wireless Keyboard and Magic Mouse with Windows 7
+
+Usage
+	{Input} means the input in Windows 7
+	[Key]   means the key on Apple Wireless Keyboard
+	For keyboard
+		1. {Delete}
+			a. enableDriveEject := 0
+				[Eject] Normal "delete" behavior (repeatedly delete chars when pressed)
+			b. enableDriveEject := 1
+				[Eject] Send {Delete} once; Eject drive if pressed for equal to or more than 1 second
+		2. {Home}, {End}, {PgUp}, {PgDn}
+			Should properly operate when combined with [Ctrl] and/or [Shift]
+				{Home} = [Fn]+[Left]
+				{End}  = [Fn]+[Right]
+				{PgUp} = [Fn]+[Up]
+				{PgDn} = [Fn]+[Down]
+	For mouse
+		1. {MButton} = [Ctrl]+[LButton]
+		2. {Browser Back}, {Browser Forward}
+			At most on action within a second
+				{Browser Back}    = [Ctrl]+[Horizontally Scroll Left]
+				{Browser Forward} = [Ctrl]+[Horizontally Scroll Right]
+
+Install & Run
+	1. Install AutoHotkey first (Basic is ok)
+		http://www.autohotkey.com/download/
+	2. Download AutohotkeyRemoteControl.dll
+		http://www.autohotkey.net/~Micha/HIDsupport/Autohotkey.html
+	3. Put this script and AutohotkeyRemoteControl.dll together
+	4. Run this script

@@ -471,13 +471,13 @@ Return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;
-; MButton = Ctrl+LButton
+; MButton = Win+LButton
 ;
-^LButton::
+#LButton::
 	Click down middle
 Return
 
-^LButton Up::
+#LButton Up::
 	Click up middle
 Return
 
@@ -486,10 +486,10 @@ enable_bbf_flag:
 Return
 
 ;
-; Broswer Back = Ctrl+WheelLeft
+; Broswer Back = Win+WheelLeft
 ; Execute at most once per second
 ;
-^WheelLeft::
+#WheelLeft::
 	if (browser_back_forward_flag = 1) {
 		Send {Browser_Back}
 		browser_back_forward_flag := 0
@@ -498,13 +498,52 @@ Return
 Return
 
 ;
-; Broswer Forward = Ctrl+WheelRight
+; Broswer Forward = Win+WheelRight
 ; Execute at most once per second
 ;
-^WheelRight::
+#WheelRight::
 	if (browser_back_forward_flag = 1) {
 		Send {Browser_Forward}
 		browser_back_forward_flag := 0
 		SetTimer, enable_bbf_flag, 1000
 	}
 Return
+
+;;
+;; MButton = Ctrl+LButton
+;;
+;^LButton::
+;	Click down middle
+;Return
+;
+;^LButton Up::
+;	Click up middle
+;Return
+;
+;enable_bbf_flag:
+;	browser_back_forward_flag := 1
+;Return
+;
+;;
+;; Broswer Back = Ctrl+WheelLeft
+;; Execute at most once per second
+;;
+;^WheelLeft::
+;	if (browser_back_forward_flag = 1) {
+;		Send {Browser_Back}
+;		browser_back_forward_flag := 0
+;		SetTimer, enable_bbf_flag, 1000
+;	}
+;Return
+;
+;;
+;; Broswer Forward = Ctrl+WheelRight
+;; Execute at most once per second
+;;
+;^WheelRight::
+;	if (browser_back_forward_flag = 1) {
+;		Send {Browser_Forward}
+;		browser_back_forward_flag := 0
+;		SetTimer, enable_bbf_flag, 1000
+;	}
+;Return

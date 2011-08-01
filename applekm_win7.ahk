@@ -212,9 +212,17 @@ Return
 
 $F6::
 	if (fnPressed = 1) {
-		Send {}
+		Send {PrintScreen}
 	} else {
 		Send {F6}
+	}
+Return
+
+!$F6::
+	if (fnPressed = 1) {
+		Send !{PrintScreen}
+	} else {
+		Send !{F6}
 	}
 Return
 
@@ -251,7 +259,7 @@ $F9::
 		;IfWinNotExist ahk_class Winamp v1.x
   		;Return
 		;ControlSend, ahk_parent, b ; Next
-		Send { VKB0SC119 }
+		Send {VKB0SC119}
 	} else {
 		Send {F9}
 	}

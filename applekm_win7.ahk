@@ -93,8 +93,8 @@ ProcessHIDData(wParam, lParam)
 		if (EjectValue = 8) {
 			; Eject is pressed
 			Send {Delete}
-			; Repeat the 2nd delete after 0.75 second, then send 40 delete key per second
-			SetTimer, sendDelete, 750
+			; Repeat the 2nd delete after 1.00 second, then send 40 delete key per second
+			SetTimer, sendDelete, 1000
 		}
 		else {
 			; Eject is let go

@@ -18,11 +18,11 @@ Usage
 				{PgUp} = [Fn]+[Up]
 				{PgDn} = [Fn]+[Down]
 	For mouse
-		1. {MButton} = [Ctrl]+[LButton]
+		1. {MButton} = [Command]+[LButton]
 		2. {Browser Back}, {Browser Forward}
 			At most on action within a second
-				{Browser Back}    = [Ctrl]+[Horizontally Scroll Left]
-				{Browser Forward} = [Ctrl]+[Horizontally Scroll Right]
+				{Browser Back}    = [Command]+[Horizontally Scroll Left]
+				{Browser Forward} = [Command]+[Horizontally Scroll Right]
 
 Install & Run
 	1. Install AutoHotkey first (Basic is ok)
